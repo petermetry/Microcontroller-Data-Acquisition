@@ -12,12 +12,11 @@ This Python script allows you to communicate with serial devices, send commands,
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [Dependencies](#dependencies)
+- [Usage](#usage)
 - [Configuration](#configuration)
 - [Examples](#examples)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -25,37 +24,62 @@ To get started, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/petermetry/Microcontroller-Data-Acquisition.git
-cd serial-data-visualization
+cd Microcontroller-Data-Acquisition
+```
 
 ## Dependencies
 
-Ensure you have Python 3 installed. You can install the required Python packages using pip:
+This project requires the following dependencies:
 
+- **Python 3**: Ensure that Python 3 is installed on your system. You can download it from the [official Python website](https://www.python.org/).
+
+- **PySerial**: A library used for serial communication with devices. You can install it by running:
+  ```bash
+  pip install pyserial
+  ```
+- **Matplotlib**: A plotting library used for real-time data visualization. Install it with:
 ```bash
-pip install -r requirements.txt
-
-If the requirements.txt file is not provided, manually install the dependencies:
-
-```bash
-pip install pyserial matplotlib
-
+pip install matplotlib
+```
 
 ## Usage
 
-- [Connect your device to a serial port on your computer.]
+- **Connect your device to a serial port on your computer.**
 
-- [Run the script:]
+- **Run the script:**
 
 ```bash
 python serial_visualization.py
+```
+- **Select the COM port when prompted.**
 
-- [Select the COM port when prompted.]
+- **Enter commands in the terminal as needed.**
 
-- [Enter commands in the terminal as needed.]
+- **View real-time plots of the data returned by your device.**
 
-- [View real-time plots of the data returned by your device.]
+## Examples
 
-## Configuration
+### Sending Commands
 
-- [###Serial Configuration: By default, the script uses a baud rate of 9600 and a timeout of 1 second. These can be modified in the configure_serial function within the script.]
-- [###Data Format: The script expects the serial device to return data in key-value pairs (e.g., Time: 10, RPM: 100, Angle: 30). This format can be adjusted by modifying the collect_data function.]
+You can send any command to your device directly through the terminal:
+
+```bash
+Enter a command to send to the device (or type 'exit' to quit): 12345
+Sending command: 12345
+Received response:
+Time: 10, RPM: 100, Angle: 30
+```
+
+### Real-Time Plotting
+Data received from the device is automatically plotted in real-time. The plot updates dynamically as new data arrives.
+
+
+## Contributing
+Contributions are welcomed! If you have suggestions, improvements, or new features to add, feel free to open a pull request or submit an issue.
+
+### How to Contribute
+- **Fork the repository.**
+- **Create a new branch (git checkout -b feature-branch).**
+- **Make your changes and commit them (git commit -am 'Add new feature').**
+- **Push to the branch (git push origin feature-branch).**
+- **Open a pull request.**
