@@ -1,4 +1,4 @@
-# Microcontroller-Data-Acquisition
+# Microcontroller Data Acquisition
 
 This Python script allows you to communicate with serial devices, send commands, receive data, and visualize that data in real-time using Matplotlib. The script is highly flexible and can be used with various devices that communicate over serial ports.
 
